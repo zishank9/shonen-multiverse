@@ -1311,3 +1311,574 @@ h3 {
         transform: none
     }
 }
+
+
+/* =========================================================
+   SHONEN MULTIVERSE V2
+   CINEMATIC MULTIVERSE PORTAL
+   ========================================================= */
+
+/* 01. HERO ATMOSPHERE */
+
+.hero-portal {
+    isolation: isolate;
+    min-height: max(760px, calc(100svh - 78px));
+    padding-block: 110px 130px;
+    gap: clamp(20px, 3vw, 55px);
+}
+
+.portal-atmosphere {
+    position: absolute;
+    inset: 0 -8vw;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.portal-nebula {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            ellipse at 76% 42%,
+            rgba(70, 90, 185, .25),
+            transparent 48%
+        ),
+        radial-gradient(
+            ellipse at 65% 62%,
+            rgba(117, 55, 165, .16),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at 15% 90%,
+            rgba(242, 197, 117, .07),
+            transparent 55%
+        );
+    animation: portalNebula 14s ease-in-out infinite alternate;
+}
+
+.portal-starlight {
+    position: absolute;
+    inset: 0;
+    opacity: .65;
+    background-image:
+        radial-gradient(2px 2px at 12% 24%, #fff 90%, transparent),
+        radial-gradient(1px 1px at 32% 65%, #b8cfff 90%, transparent),
+        radial-gradient(2px 2px at 68% 15%, #fff 90%, transparent),
+        radial-gradient(1px 1px at 83% 76%, #fff 90%, transparent),
+        radial-gradient(2px 2px at 91% 31%, #f2c575 90%, transparent);
+    background-size: 420px 370px;
+    animation: portalStars 18s linear infinite;
+}
+
+.portal-horizon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(
+        to top,
+        rgba(8, 13, 27, .95),
+        transparent
+    );
+}
+
+
+/* 02. HERO TYPOGRAPHY */
+
+.hero-portal .hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-portal h1 {
+    font-size: clamp(45px, 5.2vw, 82px);
+    line-height: 1.06;
+    letter-spacing: -.065em;
+    text-wrap: balance;
+}
+
+.hero-portal h1 em {
+    color: var(--gold);
+    font-style: normal;
+    text-shadow: 0 0 40px rgba(242, 197, 117, .18);
+}
+
+.portal-title-accent {
+    color: #fff;
+    background: linear-gradient(
+        110deg,
+        #fff 15%,
+        #f2c575 55%,
+        #91baff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-portal .hero-lead {
+    max-width: 510px;
+}
+
+.portal-inspiration {
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    max-width: 500px;
+}
+
+.portal-inspiration > span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.portal-inspiration p {
+    color: #aab8d1;
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+}
+
+.inspiration-break {
+    display: block;
+}
+
+
+/* 03. PORTAL SCENE */
+
+.portal-art {
+    position: relative;
+    z-index: 1;
+}
+
+.portal-scene {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 1;
+    isolation: isolate;
+}
+
+.portal-scene > * {
+    grid-area: 1 / 1;
+}
+
+/* Soft cosmic glow */
+
+.portal-aura {
+    position: absolute;
+    inset: 2%;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        rgba(var(--energy-rgb), .24) 0%,
+        rgba(85, 105, 220, .12) 34%,
+        transparent 72%
+    );
+    filter: blur(28px);
+    animation: portalAura 5s ease-in-out infinite;
+}
+
+/* 04. CELESTIAL RINGS */
+
+.portal-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 1px solid rgba(var(--energy-rgb), .5);
+}
+
+.portal-ring-outer {
+    width: 97%;
+    aspect-ratio: 1;
+    border: 2px dashed rgba(var(--energy-rgb), .3);
+    box-shadow: 0 0 25px rgba(var(--energy-rgb), .08);
+    animation: spin 95s linear infinite;
+}
+
+.portal-ring-middle {
+    width: 81%;
+    aspect-ratio: 1;
+    border-width: 2px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    box-shadow: 0 0 28px rgba(var(--energy-rgb), .12);
+    animation: spin 34s linear infinite reverse;
+}
+
+.portal-ring-inner {
+    width: 64%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(var(--energy-rgb), .55);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: spin 18s linear infinite;
+}
+
+/* Keep original orbit rings visible */
+
+.portal-scene .orbit-outer {
+    width: 91%;
+    height: 91%;
+    opacity: .65;
+}
+
+.portal-scene .orbit-mid {
+    width: 74%;
+    height: 74%;
+    opacity: .75;
+}
+
+.portal-scene .orbit-inner {
+    width: 50%;
+    height: 50%;
+    opacity: .85;
+}
+
+
+/* 05. ALCHEMICAL GEOMETRY */
+
+.portal-geometry {
+    position: absolute;
+    width: 66%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    animation: spin 75s linear infinite;
+}
+
+.portal-triangle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--energy-rgb), .3);
+    clip-path: polygon(
+        50% 5%,
+        95% 85%,
+        5% 85%,
+        50% 5%,
+        50% 6%,
+        7% 84%,
+        93% 84%,
+        50% 6%
+    );
+    opacity: .7;
+}
+
+.triangle-two {
+    transform: rotate(180deg);
+}
+
+.portal-geometry-circle {
+    position: absolute;
+    width: 75%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(var(--energy-rgb), .3);
+    border-radius: 50%;
+}
+
+
+/* 06. ENERGY CORE */
+
+.portal-core {
+    z-index: 5;
+    width: 30%;
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(var(--energy-rgb), .3),
+            #0a1224 72%
+        );
+    box-shadow:
+        0 0 35px rgba(var(--energy-rgb), .35),
+        0 0 90px rgba(var(--energy-rgb), .12),
+        inset 0 0 40px rgba(var(--energy-rgb), .2);
+}
+
+.portal-core:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 50px rgba(var(--energy-rgb), .55),
+        0 0 120px rgba(var(--energy-rgb), .2),
+        inset 0 0 50px rgba(var(--energy-rgb), .3);
+}
+
+.portal-core:active {
+    transform: scale(.96);
+}
+
+.portal-scene .energy-halo {
+    width: 65%;
+    z-index: 0;
+}
+
+
+/* 07. FLOATING PARTICLES */
+
+.portal-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--energy);
+    box-shadow:
+        0 0 10px var(--energy),
+        0 0 25px rgba(var(--energy-rgb), .4);
+    pointer-events: none;
+    animation: portalFloat 6s ease-in-out infinite;
+}
+
+.particle-one {
+    top: 14%;
+    left: 38%;
+    animation-delay: 0s;
+}
+
+.particle-two {
+    top: 39%;
+    right: 8%;
+    animation-delay: -2s;
+}
+
+.particle-three {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: -4s;
+}
+
+.particle-four {
+    bottom: 13%;
+    right: 30%;
+    animation-delay: -1s;
+}
+
+.portal-coordinate {
+    position: absolute;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #8e9eb9;
+    pointer-events: none;
+}
+
+.portal-coordinate-top {
+    top: 5%;
+    right: 5%;
+}
+
+.portal-coordinate-bottom {
+    bottom: 5%;
+    left: 5%;
+}
+
+
+/* 08. ENERGY CONTROL PANEL */
+
+.portal-art .core-controls {
+    position: relative;
+    z-index: 3;
+    max-width: 460px;
+    background: rgba(12, 20, 38, .86);
+    border: 1px solid rgba(var(--energy-rgb), .25);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, .25);
+    transition: border-color .4s;
+}
+
+.portal-art .mode-button {
+    transition:
+        border-color .25s,
+        background .25s,
+        color .25s,
+        transform .25s;
+}
+
+.portal-art .mode-button:hover {
+    transform: translateY(-2px);
+    border-color: var(--energy);
+}
+
+
+/* 09. ANIMATIONS */
+
+@keyframes portalNebula {
+    from {
+        opacity: .6;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes portalStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 70px 45px;
+    }
+}
+
+@keyframes portalAura {
+    0%, 100% {
+        transform: scale(.95);
+        opacity: .65;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes portalFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: .5;
+    }
+    50% {
+        transform: translateY(-22px) scale(1.5);
+        opacity: 1;
+    }
+}
+
+
+/* 10. RESPONSIVE LAYOUT */
+
+@media (max-width: 1050px) {
+    .hero-portal h1 {
+        font-size: clamp(42px, 5vw, 68px);
+        letter-spacing: -.055em;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero-portal {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-block: 75px 100px;
+        gap: 25px;
+    }
+
+    .hero-portal h1 {
+        font-size: clamp(43px, 8vw, 70px);
+    }
+
+    .portal-art {
+        width: 100%;
+        max-width: 540px;
+        margin-inline: auto;
+    }
+
+    .portal-scene {
+        max-width: 470px;
+    }
+
+    .portal-atmosphere {
+        inset-inline: -18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero-portal {
+        padding-top: 55px;
+        padding-bottom: 90px;
+    }
+
+    .hero-portal h1 {
+        font-size: clamp(38px, 10vw, 54px);
+        letter-spacing: -.055em;
+    }
+
+    .hero-portal .hero-lead {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .portal-scene {
+        max-width: 360px;
+    }
+
+    .portal-coordinate {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .portal-inspiration p {
+        font-size: 10px;
+        letter-spacing: .5px;
+    }
+
+    .portal-art .core-controls {
+        padding: 14px;
+    }
+
+    .hero-portal .hero-footnote {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-portal h1 {
+        font-size: 35px;
+    }
+
+    .portal-coordinate {
+        display: none;
+    }
+}
+
+/* 11. ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .portal-nebula,
+    .portal-starlight,
+    .portal-aura,
+    .portal-ring,
+    .portal-geometry,
+    .portal-particle {
+        animation: none !important;
+    }
+}
+
+
+/* V2 portal alignment refinements */
+
+.portal-scene .portal-ring,
+.portal-scene .portal-geometry,
+.portal-scene .portal-aura {
+    grid-area: 1 / 1;
+    place-self: center;
+}
+
+.portal-scene .portal-triangle {
+    clip-path: polygon(50% 5%, 95% 85%, 5% 85%);
+    background: transparent;
+    border: 0;
+}
+
+.portal-scene .portal-triangle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--energy-rgb), .45);
+    clip-path: polygon(
+        50% 5%,
+        95% 85%,
+        5% 85%,
+        50% 5%,
+        50% 6%,
+        7% 84%,
+        93% 84%,
+        50% 6%
+    );
+}
