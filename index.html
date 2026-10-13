@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080d1b">
+    <meta name="description"
+        content="Shonen Multiverse: explore anime, physics and mathematics through interactive experiments, stories and challenges.">
+    <title>Shonen Multiverse | Beyond the Known</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="stars" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+        <nav class="nav shell" aria-label="Main navigation">
+            <a class="brand" href="#top"><span class="brand-mark">∞</span> SHONEN<span>VERSE</span></a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+                aria-controls="nav-links"><span></span><span></span><span></span></button>
+            <div class="nav-links" id="nav-links">
+                <a href="#paths">Worlds</a><a href="#lab">Laboratory</a><a href="#archive">Archive</a><a
+                    href="#trials">Trials</a><a href="#creator">Creator</a>
+                <a class="nav-cta" href="#paths">Enter the Verse <span aria-hidden="true">↗</span></a>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero shell" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="eyebrow-line"></span> A WORLD WITHOUT LIMITS</p>
+                <h1 id="hero-title">THE UNIVERSE<br>IS <em>YOURS</em> TO<br>EXPLORE<span class="period">.</span></h1>
+                <p class="hero-lead">Every great adventure begins with curiosity. Where shonen imagination meets the
+                    laws of physics and the beauty of mathematics.</p>
+                <div class="hero-actions"><a class="button button-primary" href="#paths">Begin your journey
+                        <span>↗</span></a><a class="button button-outline" href="#lab">Explore the lab
+                        <span>→</span></a></div>
+                <div class="hero-footnote"><span class="pulse-dot"></span> ANIME <span class="dot-separator">✦</span>
+                    PHYSICS <span class="dot-separator">✦</span> MATHEMATICS</div>
+            </div>
+            <div class="hero-art reveal" aria-label="Interactive multiverse energy core">
+                <div class="orbit-scene" id="orbit-scene">
+                    <div class="orbit orbit-outer"></div>
+                    <div class="orbit orbit-mid"></div>
+                    <div class="orbit orbit-inner"></div>
+                    <div class="orbit-label orbit-label-one">探索 / EXPLORE</div>
+                    <div class="orbit-label orbit-label-two">∞ / INFINITE</div>
+                    <div class="energy-halo"></div>
+                    <button class="core" id="hero-core" type="button" aria-label="Cycle energy core mode"><span
+                            class="core-symbol" id="hero-symbol">✦</span></button>
+                    <div class="orbit-spark spark-one"></div>
+                    <div class="orbit-spark spark-two"></div>
+                    <div class="orbit-spark spark-three"></div>
+                </div>
+                <div class="core-controls" aria-label="Energy core modes">
+                    <div class="core-controls-heading"><span>ENERGY CORE / <strong
+                                id="mode-name">EQUILIBRIUM</strong></span><span class="core-status">● ONLINE</span>
+                    </div>
+                    <p id="mode-description" aria-live="polite">All possibilities begin in balance.</p>
+                    <div class="mode-buttons" role="group" aria-label="Select energy mode">
+                        <button class="mode-button active" data-mode="balance" aria-pressed="true">Core</button>
+                        <button class="mode-button" data-mode="anime" aria-pressed="false">Anime</button>
+                        <button class="mode-button" data-mode="physics" aria-pressed="false">Physics</button>
+                        <button class="mode-button" data-mode="math" aria-pressed="false">Math</button>
+                    </div>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#paths">SCROLL TO DISCOVER <span>↓</span></a>
+            <div class="hero-index" aria-hidden="true">001 / ∞</div>
+        </section>
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">BEYOND THE KNOWN <span>✦</span> QUESTION EVERYTHING <span>✦</span> IMAGINE THE
+                IMPOSSIBLE <span>✦</span> BEYOND THE KNOWN <span>✦</span> QUESTION EVERYTHING <span>✦</span> IMAGINE THE
+                IMPOSSIBLE <span>✦</span></div>
+        </div>
+        <section class="section shell" id="paths" aria-labelledby="paths-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">01 / CHOOSE YOUR PATH</p>
+                <div class="heading-line">
+                    <h2 id="paths-title">THREE WORLDS.<br><span>ENDLESS POSSIBILITIES.</span></h2>
+                    <p>Every path begins with a question. Which one will you follow?</p>
+                </div>
+            </div>
+            <div class="world-grid">
+                <a class="world-card world-anime reveal" href="#archive"><span class="world-number">WORLD 01 /
+                        IMAGINATION</span><span class="world-glyph" aria-hidden="true">魂</span>
+                    <div class="world-bottom"><span class="world-kicker">THE STORY REALM</span>
+                        <h3>ANIME<br>UNIVERSE</h3>
+                        <p>Legendary worlds, impossible abilities, and the philosophies that make heroes.</p><span
+                            class="world-link">ENTER REALM ↗</span>
+                    </div>
+                </a>
+                <a class="world-card world-physics reveal" href="#lab"><span class="world-number">WORLD 02 /
+                        REALITY</span><span class="world-glyph" aria-hidden="true">Φ</span>
+                    <div class="world-bottom"><span class="world-kicker">THE COSMIC REALM</span>
+                        <h3>PHYSICS<br>LAB</h3>
+                        <p>From black holes to time dilation: explore the rules of our universe.</p><span
+                            class="world-link">ENTER REALM ↗</span>
+                    </div>
+                </a>
+                <a class="world-card world-math reveal" href="#trials"><span class="world-number">WORLD 03 /
+                        INFINITY</span><span class="world-glyph" aria-hidden="true">∞</span>
+                    <div class="world-bottom"><span class="world-kicker">THE ABSTRACT REALM</span>
+                        <h3>MATH<br>PLAYGROUND</h3>
+                        <p>Patterns, paradoxes, probability, and the elegance hidden in numbers.</p><span
+                            class="world-link">ENTER REALM ↗</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="section lab-section" id="lab" aria-labelledby="lab-title">
+            <div class="shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">02 / THE FORBIDDEN LABORATORY</p>
+                    <div class="heading-line">
+                        <h2 id="lab-title">WHAT IF THE<br><span>IMPOSSIBLE WAS TESTABLE?</span></h2>
+                        <p>Fiction gives us questions. Science gives us tools. Let's experiment.</p>
+                    </div>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature feature-main reveal">
+                        <div class="feature-top"><span class="chip">FEATURED EXPERIMENT</span><span
+                                class="feature-id">EXP / 001</span></div>
+                        <div class="blackhole-art" aria-hidden="true">
+                            <div class="blackhole-ring"></div>
+                            <div class="blackhole-center"></div>
+                        </div>
+                        <div class="feature-bottom">
+                            <p class="feature-category">ASTROPHYSICS / GRAVITY</p>
+                            <h3>THE BLACK HOLE<br>EXPERIMENT</h3>
+                            <p>What happens when gravity becomes so strong that even light cannot escape?</p><button
+                                class="text-action" data-coming-soon="Black Hole Explorer">EXPERIMENT COMING SOON
+                                ↗</button>
+                        </div>
+                    </article>
+                    <div class="feature-side">
+                        <article class="mini-feature reveal"><span class="mini-icon">∞</span>
+                            <div>
+                                <p class="feature-category">MATHEMATICS / INFINITY</p>
+                                <h3>THE INFINITY PARADOX</h3>
+                                <p>Can you ever reach something if the distance keeps getting smaller?</p><button
+                                    class="text-action" data-coming-soon="Infinity Paradox">COMING SOON ↗</button>
+                            </div>
+                        </article>
+                        <article class="mini-feature reveal"><span class="mini-icon mini-green">⚗</span>
+                            <div>
+                                <p class="feature-category">CHEMISTRY / ALCHEMY</p>
+                                <h3>EQUIVALENT EXCHANGE</h3>
+                                <p>What alchemy gets right — and wrong — about conservation laws.</p><button
+                                    class="text-action" data-coming-soon="Equivalent Exchange">COMING SOON ↗</button>
+                            </div>
+                        </article>
+                        <article class="mini-feature reveal"><span class="mini-icon mini-orange">%</span>
+                            <div>
+                                <p class="feature-category">PROBABILITY / STRATEGY</p>
+                                <h3>THE NEN PROBABILITY LAB</h3>
+                                <p>Explore how constraints and strategy change the odds.</p><button class="text-action"
+                                    data-coming-soon="Nen Probability Lab">COMING SOON ↗</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section shell" id="archive" aria-labelledby="archive-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">03 / THE GRAND ARCHIVE</p>
+                <div class="heading-line">
+                    <h2 id="archive-title">IDEAS WORTH<br><span>GETTING LOST IN.</span></h2>
+                    <p>Stories, thought experiments, and fascinating questions for curious minds.</p>
+                </div>
+            </div>
+            <div class="archive-grid">
+                <article class="archive-card reveal"><span class="archive-index">LOG 001 / ANIME × PHYSICS</span>
+                    <div class="archive-symbol">⚡</div>
+                    <h3>CAN ANIME POWERS EXIST?</h3>
+                    <p>Taking impossible abilities seriously — just long enough to test the science.</p><span
+                        class="archive-state">ARTICLE IN DEVELOPMENT</span>
+                </article>
+                <article class="archive-card reveal"><span class="archive-index">LOG 002 / MATHEMATICS</span>
+                    <div class="archive-symbol">∑</div>
+                    <h3>THE BEAUTY OF INFINITY</h3>
+                    <p>Why infinity is more surprising, and more useful, than it first appears.</p><span
+                        class="archive-state">ARTICLE IN DEVELOPMENT</span>
+                </article>
+                <article class="archive-card reveal"><span class="archive-index">LOG 003 / PHILOSOPHY</span>
+                    <div class="archive-symbol">✧</div>
+                    <h3>WHAT MAKES A HERO?</h3>
+                    <p>Freedom, perseverance, sacrifice, and the stories we carry with us.</p><span
+                        class="archive-state">ARTICLE IN DEVELOPMENT</span>
+                </article>
+            </div>
+        </section>
+        <section class="section trials-section" id="trials" aria-labelledby="trials-title">
+            <div class="shell trials-layout">
+                <div class="reveal">
+                    <p class="eyebrow">04 / THE HUNTER'S TRIALS</p>
+                    <h2 id="trials-title">KNOWLEDGE IS<br><span>YOUR GREATEST POWER.</span></h2>
+                    <p>Think you can solve the impossible? Start with a quick mathematical trial. More puzzles and
+                        challenges are on the way.</p>
+                    <div class="trial-stats"><span>TRIAL 001</span><span>DIFFICULTY / BEGINNER</span></div>
+                </div>
+                <div class="trial-card reveal"><span class="chip">LIVE CHALLENGE</span>
+                    <h3>THE INFINITY TRIAL</h3>
+                    <p>What is the sum of the infinite series?</p>
+                    <div class="equation">½ + ¼ + ⅛ + ¹⁄₁₆ + ··· = ?</div>
+                    <form id="trial-form"><label for="trial-answer">YOUR ANSWER</label>
+                        <div class="answer-row"><input id="trial-answer" type="text" inputmode="decimal"
+                                autocomplete="off" placeholder="Enter a number" required><button
+                                class="button button-primary" type="submit">CHECK ↗</button></div>
+                        <p id="trial-feedback" class="trial-feedback" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section shell creator-section" id="creator" aria-labelledby="creator-title">
+            <div class="creator-orbit" aria-hidden="true">∞</div>
+            <div class="creator-content reveal">
+                <p class="eyebrow">05 / THE CREATOR</p>
+                <h2 id="creator-title">BUILT BY A FAN.<br><span>POWERED BY CURIOSITY.</span></h2>
+                <p>Hey, I'm Zishan. I love anime, mathematics, physics, and asking questions that don't always have easy
+                    answers. This is my space to explore them, build unusual experiments, and share what I discover
+                    along the way.</p>
+                <div class="creator-actions"><a class="button button-primary" href="https://github.com/zishank9"
+                        target="_blank" rel="noopener noreferrer">MY GITHUB ↗</a><a class="button button-outline"
+                        href="https://github.com/zishank9/product-portfolio" target="_blank"
+                        rel="noopener noreferrer">PROFESSIONAL WORK ↗</a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="shell footer-inner"><a class="brand" href="#top"><span class="brand-mark">∞</span>
+                SHONEN<span>VERSE</span></a>
+            <p>MADE WITH CURIOSITY. BUILT FOR EXPLORERS.</p><a href="#top">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
